@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "863747809753",
+    "project_id": "moje-miasto-dc912",
+    "storage_bucket": "moje-miasto-dc912.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863747809753:android:e06dcaf2ca95fb457ff9c8",
+        "android_client_info": {
+          "package_name": "com.example.moje_miasto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863747809753-230fkm397fuefsd0q9rqmd28ev204vrt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxcx49-DWn7BK77ro3vkjFqob2zPPI5O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863747809753-230fkm397fuefsd0q9rqmd28ev204vrt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -54,9 +54,11 @@ class WelcomePage extends StatelessWidget {
               Navigator.pushNamed(context, '/register');
             },
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '  Wypróbuj za darmo!',
+                  'Wypróbuj za darmo!',
+                  textAlign: TextAlign.center,
                   style: kWelcomePageTextButtonStyle,
                 ),
                 Icon(

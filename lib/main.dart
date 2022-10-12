@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'elements/main_page.dart';
+import 'core/main_page.dart';
 import 'package:moje_miasto/screens/welcome_page.dart';
 import 'package:moje_miasto/screens/register_page.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   bool welcomeScreenSeen = false;
@@ -21,8 +26,8 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (context) => welcomeScreenSeen?MainPage(cityName: 'test'):WelcomePage(),
-          // When navigating to the "/second" route, build the SecondScreen widget.
           '/register': (context) => RegisterPage(),
+          '/main':(context) => MainPage(cityName: 'test'),
         },
     );
   }
