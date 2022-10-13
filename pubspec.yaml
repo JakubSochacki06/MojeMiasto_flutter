@@ -34,10 +34,22 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+
+  # Bottom Navbar
   google_nav_bar: ^5.0.6
+
+  # Icons
   line_icons: ^2.0.0
+  font_awesome_flutter: ^10.2.1
+  # Progress bar while registering/logging in
   modal_progress_hud_nsn: ^0.3.0
+  # Bottom pop up about failure while registering/logging in
   awesome_snackbar_content: ^0.0.8
+  # Signing in with google account
+  google_sign_in: ^5.4.2
+  # State management
+  provider: ^6.0.4
+  # Firebase
   firebase_auth: ^3.11.2
   firebase_core: ^1.24.0
 dev_dependencies:

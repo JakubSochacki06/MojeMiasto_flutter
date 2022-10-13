@@ -1,6 +1,8 @@
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/user_profile.dart';
+
 
 class MainPage extends StatefulWidget {
   MainPage({required this.cityName});
@@ -11,21 +13,14 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static const List<Widget> _widgetOptions = <Widget>[
+  List<Widget> _widgetOptions = <Widget>[
     Text(
       'POZNAJ SCREEN Z UZYCIEM DANEGO MIASTA',
-      style: optionStyle,
     ),
     Text(
       'PRACA',
-      style: optionStyle,
     ),
-    Text(
-      'PROFIL',
-      style: optionStyle,
-    ),
+    UserProfilePage()
   ];
 
   @override
