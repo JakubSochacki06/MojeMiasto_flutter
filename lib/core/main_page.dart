@@ -18,7 +18,10 @@ class _MainPageState extends State<MainPage> {
       'POZNAJ SCREEN Z UZYCIEM DANEGO MIASTA',
     ),
     Text(
-      'PRACA',
+        'POMYSLY'
+    ),
+    Text(
+      'POMOZ',
     ),
     UserProfilePage()
   ];
@@ -51,7 +54,7 @@ class _MainPageState extends State<MainPage> {
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.lightGreen[200]!,
+              tabBackgroundColor: Color(0xFFCBF1F5),
               // KOLOR Z TYLU
               color: Colors.black,
               // KOLOR IKON
@@ -61,8 +64,12 @@ class _MainPageState extends State<MainPage> {
                   text: 'Poznaj',
                 ),
                 GButton(
+                  icon: LineIcons.users,
+                  text: 'Pomysły',
+                ),
+                GButton(
                   icon: LineIcons.helpingHands,
-                  text: 'Praca',
+                  text: 'Pomóż',
                 ),
                 GButton(
                   icon: LineIcons.user,

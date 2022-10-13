@@ -12,7 +12,7 @@ class UserProfilePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          user.photoURL==null?Icon(FontAwesomeIcons.user):CircleAvatar(radius: 40, backgroundImage: NetworkImage(user.photoURL!),),
+          user.photoURL==null?Icon(FontAwesomeIcons.user):CircleAvatar(radius: 40, child: Image.network(user.photoURL!, fit: BoxFit.cover,),),
           user.displayName==null?Text(user.email!, textAlign: TextAlign.center):Text(user.displayName!, textAlign: TextAlign.center)
           // Text(
             // user.displayName!
