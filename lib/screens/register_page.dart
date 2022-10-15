@@ -47,10 +47,23 @@ class _RegisterPageState extends State<RegisterPage> {
                     Text(
                       'Poznaj swoje miasto',
                       textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(height: 50,),
+                SizedBox(height: 30,),
+                Text(
+                  'Wypełnij poniższe pola, aby kontynuować',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300
+                  ),
+                ),
+                SizedBox(height: 20,),
                 Text(
                   'Podaj swój adres e-mail',
                 ),
@@ -126,7 +139,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     password: _userPassword!);
                             // Co się stanie jeśli użytkownik zostanie poprawnie zarejestrowany
                             if (user != null) {
-                              Navigator.pushNamed(context, '/main');
+                              Navigator.pushNamed(context, '/loadingToHome');
                             }
                           } catch (e) {
                             // TODO: DOPRACOWAC SNACKBARA ZEBY NIE POKAZYWAL TYCH CZARNYCH BOKOW. NA DOLE DOKUMENTACJI JEST FILMIK GDZIE ZIOMEK ROBI NA FLUTTER WAY OD 0
@@ -226,7 +239,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     elevation: 0,
                   ),
                   onPressed: () {
-                    print('clicked');
                     final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
                     provider.googleLogin();
                     Navigator.pushNamed(context, '/loadingToHome');

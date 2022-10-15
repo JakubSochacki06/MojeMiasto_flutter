@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => welcomeScreenSeen?MainPage(cityName: 'test'):WelcomePage(),
             '/register': (context) => RegisterPage(),
-            '/main':(context) => MainPage(cityName: 'test'),
             '/loadingToHome':(context) => LoadingPageToHome(),
           },
       ),

@@ -32,6 +32,7 @@ class WelcomePage extends StatelessWidget {
                 // W RAZIE POTRZEBY USUNIECIA BORDERA Z AVATARA NALEZY USUNAC PIERWSZY CIRCLE AVATAR
                 child: CircleAvatar(
                   radius: 60,
+                  // TODO: ZADECYDOWAC CZY LEPSZY NIEBIESKI CZY BIALY/ ZMIENIC TEKST LOGA NA BIALY
                   backgroundColor: Color(0xFFCBF1F5),
                   child: CircleAvatar(
                     radius: 55,
@@ -63,7 +64,7 @@ class WelcomePage extends StatelessWidget {
                 ),
                 Icon(
                   Icons.keyboard_arrow_right_outlined,
-                  color: Color(0xFFCBF1F5),
+                  color: Colors.white,
                 )
               ],
             ),

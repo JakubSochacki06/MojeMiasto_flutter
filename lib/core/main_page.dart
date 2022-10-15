@@ -2,32 +2,35 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/user_profile.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:moje_miasto/screens/discover_city_page.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({required this.cityName});
   final String cityName;
+
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
+  User? currentUser;
   int _selectedIndex = 0;
-  List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'POZNAJ SCREEN Z UZYCIEM DANEGO MIASTA',
-    ),
-    Text(
-        'POMYSLY'
-    ),
-    Text(
-      'POMOZ',
-    ),
-    UserProfilePage()
-  ];
+
 
   @override
   Widget build(BuildContext context) {
+    currentUser = FirebaseAuth.instance.currentUser!;
+    List<Widget> _widgetOptions = <Widget>[
+      DiscoverCityPage(cityName: widget.cityName),
+      Text(
+          'POMYSLY'
+      ),
+      Text(
+        'POMOZ',
+      ),
+      UserProfilePage()
+    ];
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
