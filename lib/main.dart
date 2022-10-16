@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/google_signin/google_signin.dart';
+import 'package:moje_miasto/screens/loading_page.dart';
 import 'package:moje_miasto/screens/loading_page_to_home.dart';
 import 'package:provider/provider.dart';
 import 'core/main_page.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => welcomeScreenSeen?MainPage(cityName: 'test'):WelcomePage(),
             '/register': (context) => RegisterPage(),
-            '/loadingToHome':(context) => LoadingPageToHome(),
+            '/loading': (context) => LoadingScreen(),
           },
       ),
     );

@@ -21,6 +21,8 @@ class _RegisterPageState extends State<RegisterPage> {
   String? _userPassword;
   String? _userEmail;
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,7 +141,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     password: _userPassword!);
                             // Co się stanie jeśli użytkownik zostanie poprawnie zarejestrowany
                             if (user != null) {
-                              Navigator.pushNamed(context, '/loadingToHome');
+                              Navigator.pushNamed(context, '/loading');
                             }
                           } catch (e) {
                             // TODO: DOPRACOWAC SNACKBARA ZEBY NIE POKAZYWAL TYCH CZARNYCH BOKOW. NA DOLE DOKUMENTACJI JEST FILMIK GDZIE ZIOMEK ROBI NA FLUTTER WAY OD 0
@@ -238,10 +240,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     elevation: 0,
                   ),
-                  onPressed: () {
+                  onPressed: () async{
                     final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
-                    provider.googleLogin();
-                    Navigator.pushNamed(context, '/loadingToHome');
+                    await provider.googleLogin();
+                    Navigator.pushNamed(context, '/loading');
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

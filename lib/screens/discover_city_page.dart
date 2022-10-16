@@ -10,7 +10,12 @@ class DiscoverCityPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text('$cityName jest naprawdę ciekawe!')
+        Text(
+          '$cityName jest naprawdę ciekawy!',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+        ),
+        Text('Dowiedz się więcej o swoim mieście.',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
       ],
     );
   }
