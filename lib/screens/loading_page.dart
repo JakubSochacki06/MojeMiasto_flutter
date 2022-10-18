@@ -21,11 +21,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void setShouldSelectCity() async {
-    print('started');
     await for (var snapshot in _firestore.collection('user_data').snapshots()) {
       for (var message in snapshot.docs) {
         if(message.data()['user_id'] == user.uid) {
-          print('user in database');
           userChosenCity = message.data()['city'];
           shouldSelectCity = false;
         } else{
@@ -43,7 +41,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
         }
       }
     }
-    print('ended');
   }
 
   @override

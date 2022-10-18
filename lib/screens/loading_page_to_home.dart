@@ -18,12 +18,6 @@ class _LoadingPageToHomeState extends State<LoadingPageToHome> {
   final user = FirebaseAuth.instance.currentUser!;
 
   @override
-  void initState() {
-    print('loading to home');
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
