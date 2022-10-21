@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moje_miasto/data/city_data.dart';
 import 'package:moje_miasto/widgets/president_card.dart';
 import 'package:moje_miasto/widgets/bottom_card_city_management.dart';
+import 'package:moje_miasto/widgets/reminder_city_management_card.dart';
 class CityManagementPage extends StatelessWidget {
   CityManagementPage({required this.cityName});
   final String cityName;
@@ -9,6 +10,9 @@ class CityManagementPage extends StatelessWidget {
   void setManagement() {
     if (cityName == 'Katowice') {
       cityCollection = Katowice;
+    }
+    else if(cityName == 'Warszawa'){
+      cityCollection = Warszawa;
     }
   }
 
@@ -56,8 +60,12 @@ class CityManagementPage extends StatelessWidget {
                     'Urząd miasta',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
-                  BottomCardCityManagement(street: cityCollection!['Urzad miasta']![0].toString(), photoUrl: cityCollection!['Urzad miasta']![1].toString(),)
-                //  CO WZIAC ZE SOBA DO URZEDY TABELKA
+                  BottomCardCityManagement(street: cityCollection!['Urzad miasta']![0].toString(), photoUrl: cityCollection!['Urzad miasta']![1].toString(),),
+                  Text(
+                    'Pamiętaj!',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  ),
+                  ReminderCard(),
                 ],
               ),
             ),

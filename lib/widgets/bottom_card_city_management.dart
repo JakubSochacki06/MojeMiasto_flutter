@@ -43,6 +43,9 @@ class BottomCardCityManagement extends StatelessWidget {
           Text(
             'Ulica : $street',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 10,
           )
         ],
       ),

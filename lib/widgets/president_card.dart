@@ -35,32 +35,30 @@ class PresidentCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Row(
-            children: [
-              Container(
-                width: width * 0.35,
-                height: height * 0.2,
-                margin: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  image: DecorationImage(
-                      image: NetworkImage(photoUrl), fit: BoxFit.fill),
-                ),
-              ),
-              SizedBox(
-                width: width*0.1,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children:[
-                  Text('$name', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),),
-                  Text('Numer pokoju: $roomNumber', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300)),
-                  Text('Nr. telefonu: $phoneNumber', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300)),
-                  Text('$email',style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300)),
-                ],
-              ),
-            ],
+          Container(
+            width: width * 0.35,
+            height: height * 0.2,
+            margin: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                  image: NetworkImage(photoUrl), fit: BoxFit.cover),
+            ),
+          ),
+          SizedBox(
+            width: width*0.1,
+          ),
+          Flexible(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                Flexible(child: FittedBox(child: Text('$name', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500), maxLines: 2,), fit: BoxFit.cover,)),
+                Flexible(child: FittedBox(child: Text('Numer pokoju: $roomNumber', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300), maxLines: 2,), fit: BoxFit.cover)),
+                Flexible(child: FittedBox(child: Text('Nr. telefonu: $phoneNumber', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300), maxLines: 2,), fit: BoxFit.cover)),
+                Flexible(child: FittedBox(child: Text('$email',style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300), maxLines: 2,), fit: BoxFit.cover)),
+              ],
+            ),
           ),
         ],
       ),

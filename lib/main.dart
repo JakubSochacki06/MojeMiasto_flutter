@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   bool welcomeScreenSeen = false;
   @override
   Widget build(BuildContext context) {
+
     // Zablokowanie rotacji. Aplikacja obraca się tylko w górę i dół.
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
           initialRoute: '/',
           routes: {
-            '/': (context) => welcomeScreenSeen?MainPage(cityName: 'test'):WelcomePage(),
+            '/': (context) => welcomeScreenSeen?RegisterPage():WelcomePage(),
             '/register': (context) => RegisterPage(),
             '/loading': (context) => LoadingScreen(),
           },

@@ -24,9 +24,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
     await for (var snapshot in _firestore.collection('user_data').snapshots()) {
       for (var message in snapshot.docs) {
         if(message.data()['user_id'] == user.uid) {
+          print('user in database');
           userChosenCity = message.data()['city'];
           shouldSelectCity = false;
         } else{
+          print('else triggered');
           Navigator.push(
             context,
             MaterialPageRoute(
