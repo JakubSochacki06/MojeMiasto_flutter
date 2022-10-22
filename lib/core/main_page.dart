@@ -24,9 +24,6 @@ class _MainPageState extends State<MainPage> {
     List<Widget> _widgetOptions = <Widget>[
       DiscoverCityPage(cityName: widget.cityName),
       Text(
-          'POMYSLY'
-      ),
-      Text(
         'POMOZ',
       ),
       UserProfilePage()
@@ -65,10 +62,6 @@ class _MainPageState extends State<MainPage> {
                 GButton(
                   icon: LineIcons.home,
                   text: 'Poznaj',
-                ),
-                GButton(
-                  icon: LineIcons.users,
-                  text: 'Pomysły',
                 ),
                 GButton(
                   icon: LineIcons.helpingHands,

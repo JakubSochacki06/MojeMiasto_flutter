@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/city_management_page.dart';
+import 'package:moje_miasto/screens/city_places_page.dart';
 import 'package:moje_miasto/widgets/discover_city_button.dart';
 
 class DiscoverCityPage extends StatelessWidget {
@@ -51,12 +52,23 @@ class DiscoverCityPage extends StatelessWidget {
                     );
                   }),
               DiscoverButton(
+                  label: 'Społeczność', icon: Icons.people, onTap: () {}),
+              DiscoverButton(
                 label: 'Miejsca warte\nodwiedzenia',
                 icon: Icons.place,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CityPlacesPage(
+                          cityName: cityName,
+                        );
+                      },
+                    ),
+                  );
+                },
               ),
-              DiscoverButton(
-                  label: 'Sławni ludzie', icon: Icons.people, onTap: () {}),
               DiscoverButton(
                   label: 'Ciekawostki',
                   icon: Icons.menu_book_outlined,

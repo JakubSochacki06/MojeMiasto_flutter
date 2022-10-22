@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/data/city_data.dart';
+import 'package:moje_miasto/data/city_president_data.dart';
 import 'package:moje_miasto/widgets/president_card.dart';
 import 'package:moje_miasto/widgets/bottom_card_city_management.dart';
 import 'package:moje_miasto/widgets/reminder_city_management_card.dart';

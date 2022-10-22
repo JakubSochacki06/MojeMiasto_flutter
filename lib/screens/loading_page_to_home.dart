@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:moje_miasto/screens/register_page.dart';
 import 'package:moje_miasto/core/main_page.dart';
 import 'package:moje_miasto/screens/select_city_page.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 class LoadingPageToHome extends StatefulWidget {
   LoadingPageToHome({required this.shouldSelectCity, required this.userChosenCity});
   final bool shouldSelectCity;

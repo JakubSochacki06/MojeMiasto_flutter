@@ -30,7 +30,7 @@ class _SelectCityPageState extends State<SelectCityPage> {
   }
 
   List<DropdownMenuItem> getListOfAvailableCities() {
-    List<String> availableCities = ["Głogów", "Warszawa", "Katowice"];
+    List<String> availableCities = ["Gliwice", "Warszawa", "Katowice"];
     List<DropdownMenuItem> dropdownMenuItemslist = [];
     for (String city in availableCities) {
       dropdownMenuItemslist.add(DropdownMenuItem(

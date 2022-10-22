@@ -229,7 +229,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                       ),
                       Text(
-                        'or',
+                        'lub',
                         style: TextStyle(color: Colors.black26),
                       ),
                       Expanded(

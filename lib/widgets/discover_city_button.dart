@@ -28,7 +28,7 @@ class DiscoverButton extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Icon(icon, color: Colors.white,), Text(label, style: TextStyle(color: Colors.white),)],
+          children: [Icon(icon, color: Colors.white,), SizedBox(height: 10,),Text(label, style: TextStyle(color: Colors.white), textAlign: TextAlign.center,)],
         ),
       ),
     );
