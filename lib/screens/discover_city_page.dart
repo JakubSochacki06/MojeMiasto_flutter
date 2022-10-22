@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/city_management_page.dart';
 import 'package:moje_miasto/screens/city_places_page.dart';
+import 'package:moje_miasto/screens/community_ideas_page.dart';
 import 'package:moje_miasto/widgets/discover_city_button.dart';
 
 class DiscoverCityPage extends StatelessWidget {
@@ -52,7 +53,22 @@ class DiscoverCityPage extends StatelessWidget {
                     );
                   }),
               DiscoverButton(
-                  label: 'Społeczność', icon: Icons.people, onTap: () {}),
+                label: 'Społeczność',
+                icon: Icons.people,
+                onTap: () {
+                  print('test');
+                  Navigator.push(
+                    context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return CommunityIdeasPage(
+                            cityName: cityName,
+                          );
+                        },
+                      ),
+                  );
+                },
+              ),
               DiscoverButton(
                 label: 'Miejsca warte\nodwiedzenia',
                 icon: Icons.place,
