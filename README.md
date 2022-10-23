@@ -57,7 +57,7 @@ Warto prowadzić dokumentacje aplikacji, zmiany w kodzie przychodzą o wiele ła
 **Client:** Flutter
 
 ## Ikony
-<a href="https://www.flaticon.com/free-icons/color" title="color icons">Color icons created by Nikita Golubev - Flaticon</a>
+<a href="https://www.flaticon.com/">Icony ze strony Flaticon</a>
 
 ## Autor
 
