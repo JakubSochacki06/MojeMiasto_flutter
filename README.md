@@ -16,7 +16,7 @@ Moje Miasto działałoby na zasadzie Wikipedii - mieszkańcy miasta sami by doda
 
 ## Jak pobrać?
 
-#### **Wersja szybka**
+#### **Wersja szybka (zalecana)**
 
 <a href="https://github.com/JakubSochacki06/MojeMiasto_flutter/blob/master/app-release.apk">Pobierz plik apk na telefon</a>
 
