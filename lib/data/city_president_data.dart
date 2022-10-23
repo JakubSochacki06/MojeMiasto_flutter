@@ -18,7 +18,8 @@ const Wroclaw = {
   'Prezydent':['Jacek Sutryk', '103', '71 777 82 01', 'kancelaria.prezydenta@um.wroc.pl', ''],
   'Zastepcy':[['Jakub Mazur', '130', '71 777 70 54', 'ww1@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/zd_Mazur_J.jpg'],['Renata Granowska', '315', '71 777 72 59', 'ww2@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/zd_Granowska_R.jpg'], ['Sebastian Lorenc', '155', '71 777 75 91', 'ww4@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/zd_Lorenc_S.jpg']],
   'Skarbnik':['Marcin Urban', '203', '71 777 81 35', 'skw@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/grafika/m_urban1.png'],
-  'Sekretarz':['Włodzimierz Patalas', '105', '71 777 70 52', 'smw@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/grafika/w_patalas.jpg']
+  'Sekretarz':['Włodzimierz Patalas', '105', '71 777 70 52', 'smw@um.wroc.pl', 'https://bip.um.wroc.pl/uploads/files/grafika/w_patalas.jpg'],
+  'Urzad miasta':['Nowy Targ 1-8', '']
 };
 
 const Gliwice = {
