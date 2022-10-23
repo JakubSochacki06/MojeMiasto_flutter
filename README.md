@@ -32,7 +32,7 @@ Pobierz oraz zainstaluj Android Studio, sklonuj to repozytorium, podłącz telef
 
 ## Funkcje
 
-- Wolontariat
+- Wolontariat (Przykładowe ogłoszenie widoczne, gdy wybranym miastem jest Warszawa)
 
 - Ciekawostki o mieście
 
