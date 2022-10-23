@@ -46,6 +46,9 @@ class PresidentCard extends StatelessWidget {
                   image: NetworkImage(photoUrl), fit: BoxFit.cover),
             ),
           ),
+          SizedBox(
+            width: 10,
+          ),
           Flexible(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

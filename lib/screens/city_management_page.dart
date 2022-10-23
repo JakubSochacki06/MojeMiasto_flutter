@@ -16,7 +16,12 @@ class CityManagementPage extends StatelessWidget {
     else if(cityName == 'Warszawa'){
       cityCollection = Warszawa;
     }
-  //  TODO: DOKONCZYC TUTAJ JESZCZE 2 MIASTA
+    else if(cityName == 'Gliwice'){
+      cityCollection = Gliwice;
+    }
+    else if(cityName == 'Wroclaw'){
+      cityCollection = Wroclaw;
+    }
   }
 
   @override

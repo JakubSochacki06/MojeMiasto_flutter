@@ -16,8 +16,11 @@ class CityPlacesPage extends StatelessWidget {
       cityCollection = KatowicePlaces;
     } else if (cityName == 'Warszawa') {
       cityCollection = WarszawaPlaces;
+    } else if (cityName == 'Gliwice'){
+      cityCollection = GliwicePlaces;
+    } else if (cityName == 'Wroclaw'){
+      cityCollection = WroclawPlaces;
     }
-  //   TODO: DOKONCZYC 2 MIASTA
   }
 
   void setPlacesData() {
