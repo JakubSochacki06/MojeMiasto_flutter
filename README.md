@@ -1,6 +1,10 @@
 
 ![Logo](https://github.com/JakubSochacki06/MojeMiasto_flutter/blob/master/assets/MojeMiasto.png)
 
+## Hack Heroes 2022
+
+Aplikacja Moje miasto powstała jako praca w konkursie Hack Heroes 2022, gdzie tematem przewodnim było "obywatele".
+W pełni działająca została zrobiona przez Jakuba Sochackiego, który jest gotowy, aby zrobić materiał jak ją zrobił.
 
 # Moje Miasto
 
@@ -13,6 +17,7 @@ Tyle i wkrótce jeszcze więcej czeka na ciebie w aplikacji Moje Miasto!
 ## Moje Miasto jako Wikipedia
 
 Moje Miasto działałoby na zasadzie Wikipedii - mieszkańcy miasta sami by dodawali miejsca godne odwiedzenia, ciekawostki o mieście oraz nowe pomysły.
+Aplikacja ma ogromny potencjał rozwoju dzięki pomocy użytkownków.
 
 ## Jak pobrać?
 
@@ -47,6 +52,10 @@ Pobierz oraz zainstaluj Android Studio, sklonuj to repozytorium, podłącz telef
 
 - Wprowadzenie nowych miast do bazy danych
 
+## Chcesz dodać danę od razu do kodu?
+
+Stwórz pull request, dodaj dane tak jak w poniższym przykładzie.
+<a href="https://github.com/JakubSochacki06/MojeMiasto_flutter/blob/master/lib/data/city_places_data.dart">link</a>
 
 ## Lekcje, które Moje Miasto mnie nauczyło
 
