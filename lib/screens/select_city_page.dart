@@ -1,10 +1,9 @@
+// Plik tworzy stronę, gdzie dopiero zarejestrowany użytkownik może wybrać miasto. Informacje na temat użytkownika i jego wyborze zostają wysłane do bazy danych Firestore.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:moje_miasto/styles/styles.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:moje_miasto/core/main_page.dart';
+import 'package:moje_miasto/main_navbar/main_navbar.dart';
 
 class SelectCityPage extends StatefulWidget {
   @override
@@ -30,7 +29,7 @@ class _SelectCityPageState extends State<SelectCityPage> {
   }
 
   List<DropdownMenuItem> getListOfAvailableCities() {
-    List<String> availableCities = ["Gliwice", "Warszawa", "Katowice"];
+    List<String> availableCities = ["Gliwice", "Katowice", "Warszawa", "Wroclaw",];
     List<DropdownMenuItem> dropdownMenuItemslist = [];
     for (String city in availableCities) {
       dropdownMenuItemslist.add(DropdownMenuItem(
@@ -59,13 +58,14 @@ class _SelectCityPageState extends State<SelectCityPage> {
   @override
   Widget build(BuildContext context) {
     Text HelloText = user.displayName == null
+        // Tekst zależny od tego, czy użytkownik zarejestrował się przez E-mail i hasło, czy konto Google.
         ? Text(
             'Cześć $userNameFromEmail!',
             textAlign: TextAlign.center,
-            style: kHelloTextStyle,
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
           )
         : Text('Cześć ${user.displayName}!',
-            textAlign: TextAlign.center, style: kHelloTextStyle);
+            textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700));
     return SafeArea(
       child: Scaffold(
           body: Padding(
@@ -101,10 +101,14 @@ class _SelectCityPageState extends State<SelectCityPage> {
                           width: 130,
                           height: 130,
                         ),
-                        Text(
-                          'W 944 miastach w Polsce\n mieszka około 40% Polaków.\n Swojego potencjału nie\n wykorzystuje połowa małych\n i jedna piąta średnich miast!',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 16),
+                        Expanded(
+                          child: Container(
+                            child: Text(
+                              'W 944 miastach w Polsce mieszka około 40% Polaków. Swojego potencjału nie wykorzystuje połowa małych i jedna piąta średnich miast!',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ),
                         )
                       ],
                     ),

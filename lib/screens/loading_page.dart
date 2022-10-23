@@ -1,3 +1,4 @@
+// Plik tworzy tymczasową stronę z widoczną klepsydrą. W tle program decyduje, czy użytkownik rejestruje się po raz pierwszy, czy ma już założone konto z wybranym miastem.
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

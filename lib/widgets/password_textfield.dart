@@ -1,3 +1,4 @@
+// Widget, który pobiera dane na temat hasła użytkownika, który próbuje się zarejestrować/zalogować
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {

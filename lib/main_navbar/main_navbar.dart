@@ -1,7 +1,10 @@
+// Plik tworzy nawigację, która jest na głownym ekranie.
+
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/user_profile.dart';
+import 'package:moje_miasto/screens/help_offers_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:moje_miasto/screens/discover_city_page.dart';
 
@@ -23,9 +26,7 @@ class _MainPageState extends State<MainPage> {
     currentUser = FirebaseAuth.instance.currentUser!;
     List<Widget> _widgetOptions = <Widget>[
       DiscoverCityPage(cityName: widget.cityName),
-      Text(
-        'POMOZ',
-      ),
+      HelpOffersPage(cityName: widget.cityName),
       UserProfilePage()
     ];
     return Scaffold(

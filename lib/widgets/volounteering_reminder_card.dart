@@ -1,7 +1,7 @@
-// Widget, który jest "przypominajką" o tym, że do urzędu miasta należy wziąć dokument potwierdzający osobowość.
+// Widget, który jest "przypominajką" o tym, że za bycie wolontariuszem nie należy się zapłata
 import 'package:flutter/material.dart';
 
-class ReminderCard extends StatelessWidget {
+class VolReminderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,10 @@ class ReminderCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
-                  image: AssetImage('assets/IdCard.png'), fit: BoxFit.fill),
+                  image: AssetImage('assets/HelpingHands.png'), fit: BoxFit.fill),
             ),
           ),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(child: Container(child: Text('Zabierz ze sobą dokument potwierdzający twoją osobowość. Podczas wizyty możesz zostać poproszony o okazanie jego.', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),))),
+          Expanded(child: Container(child: Text('Pomoc jest dobrowolna za wykonanie przysługi nie oczekuj wynagrodzenia bądź żadnych benefitów. Pomagaj, aby świat był lepszy za darmo!', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500), textAlign: TextAlign.center,))),
         ],
       ),
     );

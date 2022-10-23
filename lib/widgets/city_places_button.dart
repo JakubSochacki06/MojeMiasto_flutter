@@ -1,3 +1,4 @@
+// Widget, który jest przyciskiem. Używany na ekranie z miejscami wartymi odwiedzenia.
 import 'package:flutter/material.dart';
 
 class CityPlacesButton extends StatelessWidget {

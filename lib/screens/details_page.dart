@@ -1,31 +1,33 @@
+// Plik tworzy stronę z detalami. Wykorzystywany jest on do wykorzystywania strony z detalami na temat miejsc wartych odwiedzenia oraz do wyswietlenia detali z oferty pomocy jako wolontariusz
 import 'package:flutter/material.dart';
-import 'dart:io';
 
-
+// Klucz do geoapify, dzięki któremy można generować statyczną mapę miejsca za pomocą szerokości i długości geograficznej.
 const kgeoapifyApiKey = 'a24413ce7dc04eecb9a0f316e505fa15';
 
-class CityPlacesDetailsPage extends StatefulWidget {
+class DetailsPage extends StatefulWidget {
   static const routeName = '/details-page';
-  CityPlacesDetailsPage(
+  DetailsPage(
       {required this.lat,
         required this.long,
         required this.address,
         required this.imageUrl,
         required this.description,
-        required this.title});
+        required this.title,
+      required this.subject});
   final double lat;
   final double long;
   final String description;
   final String imageUrl;
   final String address;
   final String title;
+  final String subject;
   String? mapImageUrl;
 
   @override
-  State<CityPlacesDetailsPage> createState() => _CityPlacesDetailsPageState();
+  State<DetailsPage> createState() => _DetailsPageState();
 }
 
-class _CityPlacesDetailsPageState extends State<CityPlacesDetailsPage> {
+class _DetailsPageState extends State<DetailsPage> {
   Future<void> getMapImage() async {
     setState(() {
       widget.mapImageUrl =
@@ -61,7 +63,7 @@ class _CityPlacesDetailsPageState extends State<CityPlacesDetailsPage> {
                 ),
                 child: Column(
                   children: [
-                    Text('Opis miejsca',
+                    Text('Opis ${widget.subject}',
                         style: TextStyle(
                           fontSize: 35,
                         ),

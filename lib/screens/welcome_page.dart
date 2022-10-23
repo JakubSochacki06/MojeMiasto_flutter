@@ -1,5 +1,5 @@
+// Plik tworzy stronę, która wyświetla się użytkownikowi od razu po włączeniu aplikacji.
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/styles/styles.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -28,11 +28,10 @@ class WelcomePage extends StatelessWidget {
               ),
               Positioned(
                 top: height / 3,
-                left: width / 2.7,
-                // W RAZIE POTRZEBY USUNIECIA BORDERA Z AVATARA NALEZY USUNAC PIERWSZY CIRCLE AVATAR
+                left: width / 2.85,
+                // W razie potrzeby usunięcia bordera z avatara należy usunąć pierwszy CircleAvatar
                 child: CircleAvatar(
                   radius: 60,
-                  // TODO: ZADECYDOWAC CZY LEPSZY NIEBIESKI CZY BIALY/ ZMIENIC TEKST LOGA NA BIALY
                   backgroundColor: Color(0xFFCBF1F5),
                   child: CircleAvatar(
                     radius: 55,
@@ -44,11 +43,22 @@ class WelcomePage extends StatelessWidget {
           ),
           Text(
             'Dowiedz się wszystkiego\n o swoim mieście!',
-            style: kWelcomePageMiddleTextStyle,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: height / 3,
+            height: 30,
+          ),
+          Text(
+            'Aktualnie obsługujemy 4 miasta!',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(child: Image.asset('assets/SmartCity.png'), width: width*0.6, height: height*0.2,),
+          SizedBox(
+            height: 50,
           ),
           ElevatedButton(
             onPressed: () {
@@ -60,7 +70,7 @@ class WelcomePage extends StatelessWidget {
                 Text(
                   'Wypróbuj za darmo!',
                   textAlign: TextAlign.center,
-                  style: kWelcomePageTextButtonStyle,
+                  style: TextStyle(color: Colors.white),
                 ),
                 Icon(
                   Icons.keyboard_arrow_right_outlined,

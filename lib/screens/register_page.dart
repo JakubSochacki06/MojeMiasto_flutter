@@ -1,8 +1,8 @@
+// Plik tworzy stronę, gdzie użytkownik może się zarejestrować lub zalogować. Może zrobić to standardowo (e-mail oraz hasło) lub przez konto Google.
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:moje_miasto/google_signin/google_signin.dart';
-import 'package:moje_miasto/styles/styles.dart';
 import 'package:moje_miasto/widgets/email_textfield.dart';
 import 'package:moje_miasto/widgets/password_textfield.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -146,7 +146,6 @@ class _RegisterPageState extends State<RegisterPage> {
                               }
                             //  Lapie blad gdy uzytkownik ma konto i chce sie zalogowac
                             } catch (e) {
-                              // TODO: DOPRACOWAC SNACKBARA ZEBY NIE POKAZYWAL TYCH CZARNYCH BOKOW. NA DOLE DOKUMENTACJI JEST FILMIK GDZIE ZIOMEK ROBI NA FLUTTER WAY OD 0
                               try {
                                 final user = await _firebaseAuth
                                     .signInWithEmailAndPassword(
@@ -159,6 +158,8 @@ class _RegisterPageState extends State<RegisterPage> {
                               } catch (e){
                                 // co sie stanie gdy ani proba rejestracji i logowania nie zadziala
                                 var snackBar = SnackBar(
+                                  elevation: 0,
+                                  backgroundColor: Colors.transparent,
                                   content: AwesomeSnackbarContent(
                                     title: 'Błąd!',
                                     message: 'Sprawdź poprawność e-maila.',
@@ -186,33 +187,27 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     child: Row(
                       children: [
-                        Expanded(
-                          flex: 5,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Kontynuuj',
-                              style: TextStyle(
-                                // Kolor przycisku zależny od tego, czy wszystkie wymogi zostały spełnione
-                                color: isButtonActive
-                                    ? Color(0xFFEFF1F5)
-                                    : Colors.black38,
-                              ),
-                            ),
+                        Spacer(
+                          flex: 8,
+                        ),
+                        Text(
+                          'Kontynuuj',
+                          style: TextStyle(
+                            // Kolor przycisku zależny od tego, czy wszystkie wymogi zostały spełnione
+                            color: isButtonActive
+                                ? Color(0xFFEFF1F5)
+                                : Colors.black38,
                           ),
                         ),
-                        Expanded(
-                          flex: 3,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Icon(
-                              Icons.keyboard_arrow_right_outlined,
-                              // Kolor ikony zależny od stanu przycisku
-                              color: isButtonActive
-                                  ? Color(0xFFEFF1F5)
-                                  : Colors.black38,
-                            ),
-                          ),
+                        Spacer(
+                          flex: 7,
+                        ),
+                        Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          // Kolor ikony zależny od stanu przycisku
+                          color: isButtonActive
+                              ? Color(0xFFEFF1F5)
+                              : Colors.black38,
                         ),
                       ],
                     ),

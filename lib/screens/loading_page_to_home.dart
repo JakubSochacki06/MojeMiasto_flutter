@@ -1,9 +1,9 @@
-// Ta strona odpowiedzialna jest za pokazanie ładowania/komunikatu z błędem gdy użytkownik próbuje się zalogować przez Google.
+// Ta strona odpowiedzialna jest za przekierowanie użytkownika w odpowiednie miejsce. Po poprawnym zalogowaniu/zarejestrowaniu użytkownika przez e-mail i hasło/Google przesyła go dalej, jednak na wypadek problemu informuje go o tym, lub wysyła na poprzednią stronę.
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:moje_miasto/screens/register_page.dart';
-import 'package:moje_miasto/core/main_page.dart';
+import 'package:moje_miasto/main_navbar/main_navbar.dart';
 import 'package:moje_miasto/screens/select_city_page.dart';
 
 class LoadingPageToHome extends StatefulWidget {

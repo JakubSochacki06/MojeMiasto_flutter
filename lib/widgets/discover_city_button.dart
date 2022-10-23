@@ -1,3 +1,4 @@
+// Widget, który jest przyciskiem. Znajduje się na głównej stronie w 1 zakładce.
 import 'package:flutter/material.dart';
 
 class DiscoverButton extends StatelessWidget {

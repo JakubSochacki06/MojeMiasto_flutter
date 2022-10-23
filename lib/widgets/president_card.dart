@@ -1,3 +1,4 @@
+// Widget, który pokazuje każdego z wymienionych członków zarządu miasta.
 import 'package:flutter/material.dart';
 
 class PresidentCard extends StatelessWidget {
@@ -44,9 +45,6 @@ class PresidentCard extends StatelessWidget {
               image: DecorationImage(
                   image: NetworkImage(photoUrl), fit: BoxFit.cover),
             ),
-          ),
-          SizedBox(
-            width: width*0.1,
           ),
           Flexible(
             child: Column(

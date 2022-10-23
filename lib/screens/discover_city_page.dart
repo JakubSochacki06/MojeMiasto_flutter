@@ -1,7 +1,9 @@
+// Plik tworzy stronę, która wyświetla się użytkownikowi od razu po zalogowaniu/zarejestrowaniu. Znajdują się tutaj 4 przyciski, które wysyłają go na poszczególne strony.
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/city_management_page.dart';
 import 'package:moje_miasto/screens/city_places_page.dart';
 import 'package:moje_miasto/screens/community_ideas_page.dart';
+import 'package:moje_miasto/screens/curiosities_page.dart';
 import 'package:moje_miasto/widgets/discover_city_button.dart';
 
 class DiscoverCityPage extends StatelessWidget {
@@ -88,7 +90,18 @@ class DiscoverCityPage extends StatelessWidget {
               DiscoverButton(
                   label: 'Ciekawostki',
                   icon: Icons.menu_book_outlined,
-                  onTap: () {}),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return CuriositiesPage(
+                            cityName: cityName,
+                          );
+                        },
+                      ),
+                    );
+                  }),
             ],
           ),
         )

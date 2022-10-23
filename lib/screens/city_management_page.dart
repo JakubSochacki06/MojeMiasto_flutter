@@ -1,3 +1,4 @@
+// Plik tworzy ekran, na którym są wyświetlane informacje na temat zarządu miasta. Informacje na temat zarządu pobiera z pliku data/city_president_data.dart .
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/data/city_president_data.dart';
 import 'package:moje_miasto/widgets/president_card.dart';
@@ -7,19 +8,21 @@ class CityManagementPage extends StatelessWidget {
   CityManagementPage({required this.cityName});
   final String cityName;
   Map<String, List<Object>>? cityCollection;
-  void setManagement() {
+  // Przypisanie informacji o mieście, które użytkownik wybrał w momencie rejestacji konta.
+  void setCollection() {
     if (cityName == 'Katowice') {
       cityCollection = Katowice;
     }
     else if(cityName == 'Warszawa'){
       cityCollection = Warszawa;
     }
+  //  TODO: DOKONCZYC TUTAJ JESZCZE 2 MIASTA
   }
 
   @override
   Widget build(BuildContext context) {
 
-    setManagement();
+    setCollection();
     // zamiana objektu na listę, aby miec dostep do calej listy z informacjami kazdego z zastepcow
     List<String> zastepca1 = cityCollection!['Zastepcy']![0] as List<String>;
     List<String> zastepca2 = cityCollection!['Zastepcy']![1] as List<String>;

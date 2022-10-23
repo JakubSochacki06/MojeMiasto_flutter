@@ -1,3 +1,4 @@
+// Widget który pokazuje budynek zarządu miasta.
 import 'package:flutter/material.dart';
 
 class BottomCardCityManagement extends StatelessWidget {
