@@ -44,6 +44,16 @@ Pobierz oraz zainstaluj Android Studio, sklonuj to repozytorium, podłącz telef
 
 ## Roadmap - co chcę dodać
 
+- Przeniesienie lokalnej bazy danych na Firestore
+
+- Możliwość zmiany avatara w sekcji profil
+
+- Czarny motyw aplikacji
+
+- Możliwość zapamiętania użytkownika, aby nie musiał się cały czas logować
+
+- Możliwość zmiany miasta
+
 - Testy do aplikacji, aby dodawanie nowych funkcji było szybsze i wygodniejsze
 
 - Możliwość zarabiania "punktów", za które przy współpracy z władzą będzie można wymieniać na np.: zniżkę -5% na basen lub teatr. Przy współpracy z dyrektorami możnaby było ustalić ilość punktów za jednorazowe nieprzygotowanie dla ucznia. (Sytuacja w której żadna strona nie przegrywa - uczeń szkoły pomaga za darmo dla jakiejś organizacji lub nawet szkoły, za co dyrektor nagradza go jednorazowym nieprzygotowaniem)
