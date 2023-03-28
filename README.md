@@ -3,9 +3,6 @@
 
 ## Hack Heroes 2022
 
-Aplikacja Moje miasto powstała jako praca w konkursie Hack Heroes 2022, gdzie tematem przewodnim było "obywatele".
-W pełni działająca została zrobiona przez Jakuba Sochackiego, który jest gotowy, aby zrobić materiał jak ją zrobił.
-
 # Moje Miasto
 
 Czy myślałeś kiedyś, że miejsce w którym mieszkasz jest nudne, bądź nigdy nawet się nim nie interesowałeś?
