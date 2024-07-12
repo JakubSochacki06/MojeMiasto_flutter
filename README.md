@@ -1,6 +1,7 @@
 
 ![Logo](https://github.com/JakubSochacki06/MojeMiasto_flutter/blob/master/assets/MojeMiasto.png)
 
+
 ## Hack Heroes 2022
 
 # Moje Miasto
